@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!95 &2498584910746135801
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689105482447298870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f31a1efcc071b64c87848da04bd09a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &7829365872068266023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3491142080075507985, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_Name
+      value: CheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507987, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bdce2a9cb3d0242958c2593a3b8d8742,
+        type: 3}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491142080075507996, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26ed0769b0d0d7c45b87138726e58ea1, type: 3}
+--- !u!1 &6689105482447298870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3491142080075507985, guid: 26ed0769b0d0d7c45b87138726e58ea1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7829365872068266023}
+  m_PrefabAsset: {fileID: 0}
