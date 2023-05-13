@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class FinalMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Collider2D coll;
     private Animator anim;
+    private Transform pos;
 
     public float speed, jumpForce;
-    private float horizontalMove;
+    public float horizontalMove;
     public Transform groundCheck;
     public LayerMask ground;
+    public float startx, starty;
+    public float velocityy;
+    public int back = 0;
+    public List<Block> blocks = new List<Block>();
 
     public bool isGround, isJump, isDashing;
 
@@ -25,6 +30,7 @@ public class FinalMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
+        pos = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -34,11 +40,13 @@ public class FinalMovement : MonoBehaviour
         {
             jumpPressed = true;
         }
+        CheckH();
     }
 
     private void FixedUpdate()
     {
-        isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, ground);
+        isGround = Physics2D.OverlapCircle(groundCheck.position, 0.4f, ground) /*&& (rb.velocity.y < 2.5 && rb.velocity.y > -2.5)*/;
+        //isGround = (rb.velocity.y < 0.1);
 
         GroundMovement();
 
@@ -64,7 +72,7 @@ public class FinalMovement : MonoBehaviour
     {
         if (isGround)
         {
-            jumpCount = 2;//可跳跃数量
+            jumpCount = 1;//可跳跃数量
             isJump = false;
         }
         if (jumpPressed && isGround)
@@ -99,5 +107,28 @@ public class FinalMovement : MonoBehaviour
             anim.SetBool("jumping", false);
             anim.SetBool("falling", true);
         }
+    }
+
+    void CheckH()
+    {
+        if (transform.position.y<-10f)
+        {
+            Debug.Log(pos.position.y);
+            rebirth();
+        }
+    }
+
+    void rebirth()
+    {
+        transform.position = new Vector3(startx, starty, 0f);
+        foreach(Block element in blocks)
+        {
+            element.reset();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("???");
     }
 }
